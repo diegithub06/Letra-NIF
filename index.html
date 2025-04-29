@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo Letra Nif</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        #calculo-letra{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Cálculo de Letra del Nif</h1>
-    <div id="calculo-letra"></div>
+    <div id="calculo-letra">
     <label for="">Número del Nif</label>
-    <input type="text" id="nif">
-    <button>Calcular Letra</button>
-</div>
+    <input type="text" id="nif" pattern="[0-9]{8}">
+    <button onclick="muestraLetraNif()">Calcular Letra</button>
+    </div>
 <script>
     function calcularLetraNif(nif){
         letra = ['T','R','W']
