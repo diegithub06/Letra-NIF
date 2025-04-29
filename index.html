@@ -24,10 +24,16 @@
     </div>
 <script>
     function calcularLetraNif(nif){
-        letra = ['T','R','W']
+        //letra = ['T','R','W']
+        const regex = /^\d{8}$/;
+        if (regex.test(nif)){
         let letra = "TRWAGMYFPDXBNJZSQVHLCKE";
         let posicion = nif%23;
         return letra[posicion]
+    } else {
+        alert("Debes introducir 8 dígitos")
+    }
+
     }
     function muestraLetraNif(){
         let nif = document.getElementById("nif").value;
